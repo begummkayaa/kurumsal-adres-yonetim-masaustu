@@ -1,4 +1,4 @@
-# 🏢 Kurumsal Adres Yönetim Masaüstü Uygulaması
+# 🏢 Kurumsal Adres ve Raporlama Yönetim Sistemi Masaüstü Uygulaması
 
 **Kurumsal Adres Yönetim Masaüstü Uygulaması**, kurumların geniş adres verilerini tek bir merkezden güvenle yönetmesini, veri tabloları üzerinden hızlı arama/gezinme yapmasını ve Selenium altyapısı ile web tabanlı adres doğrulama süreçlerini otomatikleştirmesini sağlayan C# / WinForms tabanlı bir masaüstü yazılımıdır.
 
