@@ -76,11 +76,11 @@ private string connectionString = @"Data Source=YOUR_SERVER_NAME;Initial Catalog
 Visual Studio üzerinden F5 tuşuna basarak veya Start butonuna tıklayarak uygulamayı derleyip çalıştırabilirsiniz.
 
 ## 💡 Kullanım Senaryosu
-Uygulama açıldığında veritabanı bağlantısı kurulur ve adres verileri DataTable içerisine yüklenir.
+- Uygulama açıldığında veritabanı bağlantısı kurulur ve adres verileri DataTable içerisine yüklenir.
 
-Üst menüde yer alan İleri ve Geri butonları ile kayıtlar arasında hızlıca geçiş yapılabilir.
+- Üst menüde yer alan İleri ve Geri butonları ile kayıtlar arasında hızlıca geçiş yapılabilir.
 
-Otomasyon süreci başlatıldığında Selenium arka planda Chrome tarayıcısını tetikleyerek ilgili adres bilgilerini sorgular ve doğrulanan verileri sisteme kaydeder.
+- Otomasyon süreci başlatıldığında Selenium arka planda Chrome tarayıcısını tetikleyerek ilgili adres bilgilerini sorgular ve doğrulanan verileri sisteme kaydeder.
 
 ## 🏢 Geliştirici ve Proje Hakkında
 Bu proje, kurumsal adres verilerinin yönetimini ve web otomasyonu süreçlerini tek bir masaüstü arayüzünde birleştirmek amacıyla Begüm Kaya tarafından geliştirilmiştir.
