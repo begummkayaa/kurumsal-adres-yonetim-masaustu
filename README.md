@@ -1,6 +1,6 @@
 # 🏢 Kurumsal Adres ve Raporlama Yönetim Sistemi Masaüstü Uygulaması
 
-**Kurumsal Adres Yönetim Masaüstü Uygulaması**, kurumların geniş adres verilerini tek bir merkezden güvenle yönetmesini, veri tabloları üzerinden hızlı arama/gezinme yapmasını ve Selenium altyapısı ile web tabanlı adres doğrulama süreçlerini otomatikleştirmesini sağlayan C# / WinForms tabanlı bir masaüstü yazılımıdır.
+**Kurumsal Adres Yönetim Masaüstü Uygulaması**, kurumların geniş adres verilerini tek bir merkezden güvenle yönetmesini, veri tabloları üzerinden hızlı arama/gezinme yapmasını ve Selenium altyapısı ile TCMB döviz kurlarının otomatik olarak çekilmesini sağlayan C# / WinForms tabanlı bir masaüstü yazılımıdır.
 
 ---
 
@@ -20,8 +20,8 @@
 Kurumsal ölçekte adres verilerinin manuel yönetimi; zaman kaybına, hatalı veri girişlerine ve operasyonel aksaklıklara yol açar. Bu proje, masaüstü hızı ve web otomasyon gücünü birleştirerek verimliliği maksimuma çıkarmayı hedefler.
 
 - 🗄️ **Güçlü Veritabanı Entegrasyonu:** SQL Server tabanlı mimarisi sayesinde binlerce kaydı yüksek performansla ilişkisel olarak saklar ve sorgular.
-- 🤖 **Selenium Web Otomasyonu:** Entegre `OpenQA.Selenium` sürücüleri ile dış kaynaklı adres sorgulama ve doğrulama işlemlerini arka planda otomatikleştirir.
-- ⏱️ **Zamanlayıcı (Timer) Desteği:** Belirli periyotlarda çalışan kontrol mekanizmalarıyla adres verilerinin haftalık veya günlük periyotlarda otomatik işlenmesini sağlar.
+- 🤖 **Selenium Web Otomasyonu:** Entegre `OpenQA.Selenium` sürücüleri ile TCMB'nin web sitesinden güncel dolar ve euro kurlarını arka planda otomatik olarak çeker ve veritabanına kaydeder.
+- ⏱️ **Zamanlayıcı (Timer) Desteği:** Belirli periyotlarda çalışan kontrol mekanizmalarıyla döviz kurlarının düzenli aralıklarla otomatik olarak güncellenmesini sağlar.
 - ⚡ **Kolay Navigasyon ve Dinamik Veri Seti:** `DataTable` mimarisi ve özelleştirilmiş ToolStrip menüleri sayesinde kayıtlar arasında hızlıca gezinme (İleri/Geri) imkanı sunar.
 
 ---
@@ -31,7 +31,7 @@ Kurumsal ölçekte adres verilerinin manuel yönetimi; zaman kaybına, hatalı v
 Uygulamanın çalışma prensibi üç ana katmana dayanır:
 
 1. **Veri Yönetim Katmanı (Data Layer):** SQL Server bağlantısı (`Microsoft.Data.SqlClient`) üzerinden dinamik `DataTable` nesneleri oluşturulur. Veriler bellekte optimize bir şekilde işlenir.
-2. **Otomasyon Katmanı (Automation Layer):** Chrome WebDriver tetiklenerek hedef web servislerindeki adres doğrulama ve kaydetme süreçleri kod üzerinden otomatik yürütülür.
+2. **Otomasyon Katmanı (Automation Layer):** Chrome WebDriver tetiklenerek TCMB web sitesindeki güncel döviz kurları okunur ve veritabanındaki kur arşivine kaydedilir.
 3. **Kullanıcı Arayüzü (UI Layer):** Windows Forms mimarisi üzerinde yapılandırılmış ToolStrip butonları, Timer denetimleri ve özelleştirilmiş form bileşenleriyle kullanıcıya akıcı bir deneyim sunulur.
 
 ---
@@ -51,7 +51,7 @@ Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları sırası
 
 ### 1. Repoyu Klonlayın
 ```bash
-git clone [https://github.com/begummkayaa/kurumsal-adres-yonetim-masaustu.git](https://github.com/begummkayaa/kurumsal-adres-yonetim-masaustu.git)
+git clone https://github.com/begummkayaa/kurumsal-adres-yonetim-masaustu.git
 cd kurumsal-adres-yonetim-masaustu
 ```
 
@@ -80,10 +80,10 @@ Visual Studio üzerinden F5 tuşuna basarak veya Start butonuna tıklayarak uygu
 
 - Üst menüde yer alan İleri ve Geri butonları ile kayıtlar arasında hızlıca geçiş yapılabilir.
 
-- Otomasyon süreci başlatıldığında Selenium arka planda Chrome tarayıcısını tetikleyerek ilgili adres bilgilerini sorgular ve doğrulanan verileri sisteme kaydeder.
+- Kur çekme işlemi başlatıldığında Selenium arka planda Chrome tarayıcısını açarak TCMB'den güncel döviz kurlarını okur ve kur arşivine kaydeder.
 
 ## 🏢 Geliştirici ve Proje Hakkında
-Bu proje, kurumsal adres verilerinin yönetimini ve web otomasyonu süreçlerini tek bir masaüstü arayüzünde birleştirmek amacıyla Begüm Kaya tarafından geliştirilmiştir.
+Bu proje, kurumsal adres verilerinin yönetimini ve TCMB döviz kuru otomasyonunu tek bir masaüstü arayüzünde birleştirmek amacıyla Begüm Kaya tarafından geliştirilmiştir.
 
 ## 📄 Lisans
 Bu proje MIT Lisansı altında lisanslanmıştır. Daha fazla bilgi için LICENSE dosyasına göz atabilirsiniz.
