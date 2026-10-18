@@ -2,6 +2,8 @@
 
 **Kurumsal Adres Yönetim Masaüstü Uygulaması**, kurumların geniş adres verilerini tek bir merkezden güvenle yönetmesini, veri tabloları üzerinden hızlı arama/gezinme yapmasını ve Selenium altyapısı ile TCMB döviz kurlarının otomatik olarak çekilmesini sağlayan C# / WinForms tabanlı bir masaüstü yazılımıdır.
 
+> 🔗 Bu projenin [web](https://github.com/begummkayaa/kurumsal-adres-yonetim-web) ve [mobil](https://github.com/begummkayaa/kurumsal-adres-yonetim-mobil) sürümleri de bulunmaktadır. Üç sürüm aynı SQL Server veritabanını kullanır.
+
 ---
 
 ## 📑 İçindekiler
